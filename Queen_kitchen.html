@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nashwa's Kitchen</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .brand-logo {
+            font-family: 'Poppins', sans-serif;
+            color: #4A5568; /* Tailwind Gray-700 */
+            font-weight: 600;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+   <!-- Header/Navbar -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a class="brand-logo" href="#">Nashwa's Kitchen</a>
+            <nav class="flex">
+                <button id="menu-toggle" class="text-gray-800 hover:text-gray-600 md:hidden px-3 py-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+                <div class="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0" id="menu">
+                    <a href="#" class="text-gray-800 hover:text-gray-600 px-3 py-2">Home</a>
+                    <a href="#" class="text-gray-800 hover:text-gray-600 px-3 py-2">Menu</a>
+                    <a href="#" class="text-gray-800 hover:text-gray-600 px-3 py-2">About</a>
+                    <a href="#" class="text-gray-800 hover:text-gray-600 px-3 py-2">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
+
+    <!-- Hero Section -->
+    <section class="text-gray-700 body-font">
+        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+            <div class="text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Explore Our Delicious Dishes</h1>
+                <p class="mb-8 leading-relaxed">Taste the best recipes crafted with love by Nashwa. Fresh, flavorful, and delivered to your door.</p>
+                <!-- Links to Delivery Services -->
+                <div class="flex justify-center">
+                    <a href="https://www.skipthedishes.com" class="bg-gray-900 text-white px-5 py-2 rounded mr-2">Skip the Dishes</a>
+                    <a href="https://www.ubereats.com" class="bg-gray-900 text-white px-5 py-2 rounded">Uber Eats</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Dishes Menu Section -->
+    <section class="text-gray-700 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div id="menuItems" class="flex flex-wrap -m-4">
+                <!-- Dynamic Dishes Will Be Inserted Here -->
+            </div>
+        </div>
+    </section>
+    <!-- Dishes Menu Section -->
+    <section class="text-gray-700 body-font" id="menu-section">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap -m-4" id="dishes-container">
+                <!-- Dynamic dishes will be inserted here -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="text-gray-600 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="brand-logo" href="#">Nashwa's Kitchen</a>
+            <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">©2020 Nashwa's Kitchen —
+                <a href="https://www.facebook.com/yourpage" class="text-gray-600 ml-1" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://www.instagram.com/yourpage" class="text-gray-600 ml-1" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
